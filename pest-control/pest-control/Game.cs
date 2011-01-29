@@ -15,6 +15,14 @@ namespace pest_control
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Menu menu;
+        MenuView menuView;
+        EventQueue eventQueue;
+        View currentView;
+        Controller currentController;
+        World world;
+        WorldView worldView;
+
         public Game()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -29,7 +37,13 @@ namespace pest_control
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            eventQueue = new EventQueue();
+
+            menu = new Menu(eventQueue);
+            menuView = new MenuView(GraphicsDevice,menu);
+
+            currentView = menuView;
+            currentController = menu;
 
             base.Initialize();
         }
@@ -40,10 +54,7 @@ namespace pest_control
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
+            menuView.LoadContent(Content);
         }
 
         /// <summary>
@@ -63,6 +74,20 @@ namespace pest_control
         protected override void Update(GameTime gameTime)
         {
 
+            currentController.Update();
+
+            while (!eventQueue.IsQueueEmpty("SYSTEM"))
+            {
+                Event e = eventQueue.DequeueEvent("SYSTEM");
+                if (e.getName() == "NEW_GAME")
+                {
+                    world = new World(eventQueue);
+                    worldView = new WorldView(GraphicsDevice,world);
+                    currentController = world;
+                    currentView = worldView;
+                }
+            }
+
             base.Update(gameTime);
         }
 
@@ -72,9 +97,7 @@ namespace pest_control
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
+            currentView.Draw();
 
             base.Draw(gameTime);
         }

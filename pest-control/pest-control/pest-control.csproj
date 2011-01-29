@@ -108,22 +108,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoundingBox.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="Damage.cs" />
     <Compile Include="DamageType.cs" />
     <Compile Include="Decider.cs" />
     <Compile Include="Direction.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EventQueue.cs" />
     <Compile Include="game\Character.cs" />
     <Compile Include="game\Critter.cs" />
     <Compile Include="game\LivingThing.cs" />
     <Compile Include="game\MovingThing.cs" />
     <Compile Include="game\Projectile.cs" />
     <Compile Include="Location.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="game\Thing.cs" />
     <Compile Include="game\Weapon.cs" />
     <Compile Include="game\World.cs" />
+    <Compile Include="view\MenuView.cs" />
+    <Compile Include="view\View.cs" />
+    <Compile Include="view\WorldView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

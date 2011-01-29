@@ -8,8 +8,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace pest_control
 {
-    class World
+    class World : Controller
     {
+        public World(EventQueue eventQueue) : base(eventQueue) { }
+
+        public override void Update()
+        {
+
+        }
         private static Random rand = new Random();
 
         private readonly int HEIGHT;
@@ -26,7 +32,8 @@ namespace pest_control
 
         private List<Thing> things;
 
-        public World(int cellsize, int height, int width, int players)
+        public World(int cellsize, int height, int width, int players, EventQueue eventQueue)
+            :base(eventQueue)
         {
             this.HEIGHT = height;
             this.WIDTH = width;
