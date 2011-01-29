@@ -129,9 +129,9 @@
     <Compile Include="game\Thing.cs" />
     <Compile Include="game\Weapon.cs" />
     <Compile Include="game\World.cs" />
-    <Compile Include="view\MenuView.cs" />
-    <Compile Include="view\View.cs" />
-    <Compile Include="view\WorldView.cs" />
+    <Compile Include="views\MenuView.cs" />
+    <Compile Include="views\View.cs" />
+    <Compile Include="views\WorldView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
