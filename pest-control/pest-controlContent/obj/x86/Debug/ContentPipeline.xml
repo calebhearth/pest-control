@@ -7,8 +7,134 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\TEMP.KNOWN-UNIVERSE\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\menuFont.xnb</Output>
-      <Time>2011-01-29T01:54:05.699048-07:00</Time>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\menuFont.xnb</Output>
+      <Time>2011-01-28T23:14:36-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\critter-dead.png</Source>
+      <Name>sprites\critter-dead</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\critter-dead.xnb</Output>
+      <Time>2011-01-29T03:15:48-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\critter-left-largeeyes.png</Source>
+      <Name>sprites\critter-left-largeeyes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\critter-left-largeeyes.xnb</Output>
+      <Time>2011-01-29T03:09:02-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\critter-left-smalleyes.png</Source>
+      <Name>sprites\critter-left-smalleyes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\critter-left-smalleyes.xnb</Output>
+      <Time>2011-01-29T03:01:42-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\critter-left.png</Source>
+      <Name>sprites\critter-left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\critter-left.xnb</Output>
+      <Time>2011-01-29T03:08:46-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\critter-right-largeeyes.png</Source>
+      <Name>sprites\critter-right-largeeyes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\critter-right-largeeyes.xnb</Output>
+      <Time>2011-01-29T03:06:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\critter-right-smalleyes.png</Source>
+      <Name>sprites\critter-right-smalleyes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\critter-right-smalleyes.xnb</Output>
+      <Time>2011-01-29T03:27:24-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\critter-right.png</Source>
+      <Name>sprites\critter-right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\critter-right.xnb</Output>
+      <Time>2011-01-29T03:06:06-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\player-front-step-left.png</Source>
+      <Name>sprites\player-front-step-left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\player-front-step-left.xnb</Output>
+      <Time>2011-01-29T03:27:12-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\player-front-step-right.png</Source>
+      <Name>sprites\player-front-step-right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\player-front-step-right.xnb</Output>
+      <Time>2011-01-29T03:27:00-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\terrain-grass.png</Source>
+      <Name>sprites\terrain-grass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\terrain-grass.xnb</Output>
+      <Time>2011-01-29T03:24:54-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\terrain-shrub.png</Source>
+      <Name>sprites\terrain-shrub</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\terrain-shrub.xnb</Output>
+      <Time>2011-01-29T03:24:40-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\terrain-tree.png</Source>
+      <Name>sprites\terrain-tree</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\terrain-tree.xnb</Output>
+      <Time>2011-01-29T03:24:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\terrain-water.png</Source>
+      <Name>sprites\terrain-water</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\terrain-water.xnb</Output>
+      <Time>2011-01-29T03:24:18-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\critter-sleeping.png</Source>
+      <Name>sprites\critter-sleeping</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\sprites\critter-sleeping.xnb</Output>
+      <Time>2011-01-29T03:11:24-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -16,39 +142,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\TEMP.KNOWN-UNIVERSE\Desktop\pest-control\pest-control\pest-controlContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\TEMP.KNOWN-UNIVERSE\Desktop\pest-control\pest-control\pest-control\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\TEMP.KNOWN-UNIVERSE\Desktop\pest-control\pest-control\pest-controlContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\TEMP.KNOWN-UNIVERSE\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-controlContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-controlContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Caleb\Desktop\pest-control\pest-control\pest-control\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2010-12-21T15:12:43.9632537-07:00</Value>
+        <Value>2010-11-26T21:36:25.1832928-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

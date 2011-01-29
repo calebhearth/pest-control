@@ -11,18 +11,29 @@ namespace pest_control
     class WorldView : View
     {
         protected SpriteBatch worldBatch;
-        protected Texture2D lameThingTexture;
+        protected Dictionary<string, Texture2D> assets;
         protected World world;
 
         public WorldView(GraphicsDevice graphicsDevice, World world) : base(graphicsDevice) {
-            lameThingTexture = new Texture2D(graphicsDevice, 1, 1);
-            lameThingTexture.SetData(new[] { Color.Black });
+            assets = new Dictionary<string, Texture2D>();
             this.world = world;
         }
 
         public override void LoadContent(ContentManager contentManager)
         {
             worldBatch = new SpriteBatch(graphicsDevice);
+            assets["player-front-step-left"] = contentManager.Load<Texture2D>("sprites\\player-front-step-left");
+            assets["critter-dead"] = contentManager.Load<Texture2D>("sprites\\critter-dead");
+            assets["critter-left"] = contentManager.Load<Texture2D>("sprites\\critter-left");
+            assets["critter-left-smalleyes"] = contentManager.Load<Texture2D>("sprites\\critter-left-smalleyes");
+            assets["critter-left-largeeyes"] = contentManager.Load<Texture2D>("sprites\\critter-left-largeeyes");
+            assets["critter-sleeping"] = contentManager.Load<Texture2D>("sprites\\critter-sleeping");
+            assets["critter-right-largeeyes"] = contentManager.Load<Texture2D>("sprites\\critter-right-largeeyes");
+            assets["critter-right-smalleyes"] = contentManager.Load<Texture2D>("sprites\\critter-right-smalleyes");
+            assets["terrain-grass"] = contentManager.Load<Texture2D>("sprites\\terrain-grass");
+            assets["terrain-shrub"] = contentManager.Load<Texture2D>("sprites\\terrain-shrub");
+            assets["terrain-tree"] = contentManager.Load<Texture2D>("sprites\\terrain-tree");
+            assets["terrain-water"] = contentManager.Load<Texture2D>("sprites\\terrain-water");
         }
 
         public override void Draw()
@@ -31,15 +42,21 @@ namespace pest_control
             graphicsDevice.Clear(Color.Pink);
             foreach (Thing t in world.Things)
             {
-                DrawThing(t.BoundingBox.TopLeft.X, t.BoundingBox.TopLeft.Y);
+                string assetName;
+                int cellSizeMultiplier;
+                if (t is Character)
+                {
+                    assetName = "player-front-step-left";
+                    cellSizeMultiplier = 3;
+                }
+                else //if (t is Critter)
+                {
+                    assetName = "critter-left";
+                    cellSizeMultiplier = 1;
+                }
+                worldBatch.Draw(assets[assetName], new Rectangle(t.BoundingBox.TopLeft.X, t.BoundingBox.TopLeft.Y, 30 * cellSizeMultiplier, 30* cellSizeMultiplier), Color.White);
             }
             worldBatch.End();
         }
-
-        public void DrawThing(int x, int y)
-        {
-            worldBatch.Draw(lameThingTexture, new Rectangle(x, y, 30, 30), Color.Black);
-        }
-
     }
 }
