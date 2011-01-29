@@ -36,7 +36,7 @@ namespace pest_control
 
             foreach (Chromosome c in chromosomes)
             {
-                if (c.getType().ToString() == "SpeedMod")//only the speed modifier chromosome is implemented here, as the other attributes do not yet exist to be modified
+                if (c.GetType().ToString() == "SpeedMod")//only the speed modifier chromosome is implemented here, as the other attributes do not yet exist to be modified
                 {
                     this.speed *= 2;
                 }
