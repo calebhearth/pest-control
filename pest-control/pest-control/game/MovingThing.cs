@@ -18,37 +18,37 @@ namespace pest_control
             switch (this.direction)
             {
                 case Direction.Up:
-                    this.boundingBox.TopLeft.Y -= speed;
+                    this.BoundingBox.TopLeft.Y -= speed;
                     this.BoundingBox.TopLeft.Y -= speed;
                     break;
                 case Direction.UpRight:
-                    this.boundingBox.TopLeft.Y -= speed;
-                    this.boundingBox.TopLeft.X += speed;
+                    this.BoundingBox.TopLeft.Y -= speed;
+                    this.BoundingBox.TopLeft.X += speed;
                     break;
                 case Direction.Right:
-                    this.boundingBox.TopLeft.X += speed;
+                    this.BoundingBox.TopLeft.X += speed;
                     break;
                 case Direction.DownRight:
-                    this.boundingBox.TopLeft.Y += speed;
-                    this.boundingBox.TopLeft.X += speed;
+                    this.BoundingBox.TopLeft.Y += speed;
+                    this.BoundingBox.TopLeft.X += speed;
                     break;
                 case Direction.Down:
                     this.BoundingBox.TopLeft.Y += speed;
                     break;
                 case Direction.DownLeft:
-                    this.boundingBox.TopLeft.Y += speed;
-                    this.boundingBox.TopLeft.X -= speed;
+                    this.BoundingBox.TopLeft.Y += speed;
+                    this.BoundingBox.TopLeft.X -= speed;
                     break;
                 case Direction.Left:
                     this.BoundingBox.TopLeft.X -= speed;
                     break;
                 case Direction.UpLeft:
-                    this.boundingBox.TopLeft.X -= speed;
-                    this.boundingBox.TopLeft.Y -= speed;
+                    this.BoundingBox.TopLeft.X -= speed;
+                    this.BoundingBox.TopLeft.Y -= speed;
                     break;
                 default:
-                    this.boundingBox.TopLeft.X = 0;
-                    this.boundingBox.TopLeft.Y = 0;
+                    this.BoundingBox.TopLeft.X = 0;
+                    this.BoundingBox.TopLeft.Y = 0;
                     break;
             }
         }

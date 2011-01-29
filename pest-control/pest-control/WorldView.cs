@@ -60,7 +60,7 @@ namespace pest_control
                 {
                     cellSizeMultiplier = 3;
                 }
-                worldBatch.Draw(assets[assetName], new Rectangle(t.BoundingBox.TopLeft.X, t.BoundingBox.TopLeft.Y, 30 * cellSizeMultiplier, 30* cellSizeMultiplier), Color.White);
+                worldBatch.Draw(assets[assetName], new Rectangle(t.BoundingBox.TopLeft.X - c.BoundingBox.TopLeft.X + (displayWidth / 2), t.BoundingBox.TopLeft.Y - c.BoundingBox.TopLeft.Y + (displayHeight / 2), 30 * cellSizeMultiplier, 30 * cellSizeMultiplier), Color.White);
             }
             worldBatch.End();
         }
