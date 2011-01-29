@@ -5,7 +5,7 @@ using System.Text;
 
 namespace pest_control
 {
-    class Event
+    public class Event
     {
 
         protected String name;

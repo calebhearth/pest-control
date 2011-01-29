@@ -5,7 +5,7 @@ using System.Text;
 
 namespace pest_control
 {
-    abstract class Controller
+    public abstract class Controller
     {
         protected EventQueue eventQueue;
 
@@ -13,5 +13,8 @@ namespace pest_control
 
         public abstract void Update();
 
+        public virtual void inputNone(int playerNumber) { }
+        public virtual void inputDirection(int playerNumber, Direction d) { }
+        public virtual void inputShoot(int playerNumber) { }
     }
 }

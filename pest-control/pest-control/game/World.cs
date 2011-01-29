@@ -11,39 +11,34 @@ namespace pest_control
 {
     class World : Controller
     {
+
+        public override void inputDirection(int playerNumber, Direction d)
+        {
+            if (playerNumber != 1) return;
+
+            Character c = null;
+            foreach (Thing t in things) { if (t is Character) { c = (t as Character);  } }
+            c.setDirection(d);
+            c.setSpeed(1);
+        }
+
+        public override void inputShoot(int playerNumber)
+        {
+            if (playerNumber != 1) return;
+        }
+
+        public override void inputNone(int playerNumber)
+        {
+            if (playerNumber != 1) return;
+
+            Character c = null;
+            foreach (Thing t in things) { if (t is Character) { c = (t as Character); break; } }
+
+            c.setSpeed(0);
+        }
+
         public override void Update()
         {
-
-            if (Keyboard.GetState().IsKeyDown(Keys.Up))
-            {
-                foreach (Thing t in things)
-                {
-                    if(t is Character) { (t as Character).setSpeed(1); (t as Character).setDirection(Direction.Up); }
-                }
-            } else if (Keyboard.GetState().IsKeyDown(Keys.Down))
-            {
-                foreach (Thing t in things)
-                {
-                    if(t is Character) { (t as Character).setSpeed(1); (t as Character).setDirection(Direction.Down); }
-                }
-            } else if (Keyboard.GetState().IsKeyDown(Keys.Left))
-            {
-                foreach (Thing t in things)
-                {
-                    if(t is Character) { (t as Character).setSpeed(1); (t as Character).setDirection(Direction.Left);}
-                }
-            } else if (Keyboard.GetState().IsKeyDown(Keys.Right))
-            {
-                foreach (Thing t in things)
-                {
-                    if(t is Character) { (t as Character).setSpeed(1); (t as Character).setDirection(Direction.Right);}
-                }
-            } else {
-                foreach (Thing t in things)
-                {
-                    if (t is Character) { (t as Character).setSpeed(0); }
-                }
-            }
 
             foreach (Thing t in things)
             {

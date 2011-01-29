@@ -27,30 +27,41 @@ namespace pest_control
         public int getCurrentCommand() { return currentCommand; }
 
         public override void Update()
+        { }
+
+        public override void inputDirection(int playerNumber, Direction d)
         {
-            if(waitForKeysUp) {
-                if (Keyboard.GetState().GetPressedKeys().Count() == 0)
-                {
-                    waitForKeysUp = false;
-                }
-                return;
-            }
-            if (Keyboard.GetState().IsKeyDown(Keys.Up) && currentCommand > 0)
+            if (playerNumber != 1 || waitForKeysUp) return;
+
+            if ((d == Direction.Up || d == Direction.UpLeft || d == Direction.UpRight) && currentCommand > 0)
             {
                 currentCommand--;
-                waitForKeysUp = true;
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down) && currentCommand < commands.Count - 1)
+            else if ((d == Direction.Down || d == Direction.DownLeft || d == Direction.DownRight) && currentCommand < commands.Count-1)
             {
                 currentCommand++;
-                waitForKeysUp = true;
-            } 
-            else if (Keyboard.GetState().IsKeyDown(Keys.Enter) )
-            {
-                if (currentCommand == 0) { 
-                    
-                    eventQueue.EnqueueEvent("SYSTEM", new Event("NEW_GAME")); }
             }
+
+            waitForKeysUp = true;
+        }
+
+        public override void inputShoot(int playerNumber)
+        {
+            if (playerNumber != 1 || waitForKeysUp) return;
+
+            if (currentCommand == 0)
+            {
+                eventQueue.EnqueueEvent("SYSTEM", new Event("NEW_GAME"));
+            }
+
+            waitForKeysUp = true;
+        }
+
+        public override void inputNone(int playerNumber)
+        {
+            if (playerNumber != 1) return;
+
+            waitForKeysUp = false;
         }
     }
 }

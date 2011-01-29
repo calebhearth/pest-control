@@ -10,7 +10,7 @@ namespace pest_control
         private static Random rand = new Random();
         public Direction decide()
         {
-            return (Direction)rand.Next(4) + 1;
+            return (Direction)rand.Next(8) + 1;
         }
     }
 }

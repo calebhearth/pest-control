@@ -38,8 +38,12 @@ namespace pest_control
 
         public override void Draw()
         {
+            Character c = null;
+            foreach (Thing t in world.Things) { if (t is Character) { c = (t as Character); break; } }
             worldBatch.Begin();
             graphicsDevice.Clear(Color.Pink);
+            int displayWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            int displayHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
             foreach (Thing t in world.Things)
             {
                 string assetName;

@@ -20,14 +20,34 @@ namespace pest_control
                 case Direction.Up:
                     this.boundingBox.TopLeft.Y -= speed;
                     break;
+                case Direction.UpRight:
+                    this.boundingBox.TopLeft.Y -= speed;
+                    this.boundingBox.TopLeft.X += speed;
+                    break;
+                case Direction.Right:
+                    this.boundingBox.TopLeft.X += speed;
+                    break;
+                case Direction.DownRight:
+                    this.boundingBox.TopLeft.Y += speed;
+                    this.boundingBox.TopLeft.X += speed;
+                    break;
                 case Direction.Down:
                     this.boundingBox.TopLeft.Y += speed;
+                    break;
+                case Direction.DownLeft:
+                    this.boundingBox.TopLeft.Y += speed;
+                    this.boundingBox.TopLeft.X -= speed;
                     break;
                 case Direction.Left:
                     this.boundingBox.TopLeft.X -= speed;
                     break;
-                case Direction.Right:
-                    this.boundingBox.TopLeft.X += speed;
+                case Direction.UpLeft:
+                    this.boundingBox.TopLeft.X -= speed;
+                    this.boundingBox.TopLeft.Y -= speed;
+                    break;
+                default:
+                    this.boundingBox.TopLeft.X = 0;
+                    this.boundingBox.TopLeft.Y = 0;
                     break;
             }
         }

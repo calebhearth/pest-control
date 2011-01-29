@@ -22,12 +22,15 @@ namespace pest_control
         Controller currentController;
         World world;
         WorldView worldView;
+        Player player;
 
         public Game()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferWidth = 1024;
-            graphics.PreferredBackBufferHeight = 768;
+            graphics.ToggleFullScreen();
+            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            graphics.ApplyChanges();
             Content.RootDirectory = "Content";
         }
 
@@ -40,6 +43,8 @@ namespace pest_control
         protected override void Initialize()
         {
             eventQueue = new EventQueue();
+
+            player = new Player(1,this);
 
             menu = new Menu(eventQueue);
             menuView = new MenuView(GraphicsDevice,menu);
@@ -75,7 +80,7 @@ namespace pest_control
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-
+            player.Update();
             currentController.Update();
 
             while (!eventQueue.IsQueueEmpty("SYSTEM"))
@@ -104,5 +109,7 @@ namespace pest_control
 
             base.Draw(gameTime);
         }
+
+        public Controller getCurrentController() { return currentController; }
     }
 }

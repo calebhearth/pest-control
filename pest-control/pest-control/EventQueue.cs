@@ -5,7 +5,7 @@ using System.Text;
 
 namespace pest_control
 {
-    class EventQueue
+    public class EventQueue
     {
 
         Dictionary<String, Queue<Event>> namedEventQueues;
