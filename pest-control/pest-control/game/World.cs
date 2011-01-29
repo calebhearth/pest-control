@@ -19,7 +19,7 @@ namespace pest_control
             Character c = null;
             foreach (Thing t in things) { if (t is Character) { c = (t as Character);  } }
             c.setDirection(d);
-            c.setSpeed(1);
+            c.setSpeed(3);
         }
 
         public override void inputShoot(int playerNumber)
