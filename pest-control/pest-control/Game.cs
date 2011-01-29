@@ -44,7 +44,7 @@ namespace pest_control
         {
             eventQueue = new EventQueue();
 
-            player = new Player(1,this);
+            player = new Player(1,this,eventQueue);
 
             menu = new Menu(eventQueue);
             menuView = new MenuView(GraphicsDevice,menu);
@@ -86,13 +86,18 @@ namespace pest_control
             while (!eventQueue.IsQueueEmpty("SYSTEM"))
             {
                 Event e = eventQueue.DequeueEvent("SYSTEM");
-                if (e.getName() == "NEW_GAME")
+                switch(e.getName())
                 {
-                    world = new World(30, 2000, 2000, 1, eventQueue);
-                    worldView = new WorldView(GraphicsDevice,world);
-                    worldView.LoadContent(Content);
-                    currentController = world;
-                    currentView = worldView;
+                    case "NEW_GAME":
+                        world = new World(30, 2000, 2000, 1, eventQueue);
+                        worldView = new WorldView(GraphicsDevice,world);
+                        worldView.LoadContent(Content);
+                        currentController = world;
+                        currentView = worldView;
+                        break;
+                    case "TERMINATE":
+                        Exit();
+                        break;
                 }
             }
 

@@ -11,15 +11,22 @@ namespace pest_control
 
         int playerNumber;
         Game game;
+        EventQueue eventQueue;
 
-        public Player(int playerNumber, Game g)
+        public Player(int playerNumber, Game g, EventQueue eventQueue)
         {
             this.playerNumber = playerNumber;
             this.game = g;
+            this.eventQueue = eventQueue;
         }
 
         public void Update()
         {
+            if (isKeyDown(Keys.F12))
+            {
+                eventQueue.EnqueueEvent("SYSTEM", new Event("TERMINATE"));
+            }
+
             if (isKeyDown(Keys.Up) && isKeyDown(Keys.Left))
             {
                 game.getCurrentController().inputDirection(playerNumber,Direction.UpLeft);
