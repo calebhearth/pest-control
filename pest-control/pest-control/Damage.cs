@@ -8,6 +8,6 @@ namespace pest_control
     public class Damage
     {
         private DamageType type;
-        private int rating;
+        private double rating;
     }
 }

@@ -10,6 +10,6 @@ namespace pest_control
 {
     public abstract class LivingThing : MovingThing
     {
-        protected int health;
+        protected double health;
     }
 }

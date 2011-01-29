@@ -116,6 +116,8 @@
     <Compile Include="Event.cs" />
     <Compile Include="EventQueue.cs" />
     <Compile Include="game\Character.cs" />
+    <Compile Include="game\Chromasome.cs" />
+    <Compile Include="game\ChromasomeType.cs" />
     <Compile Include="game\Critter.cs" />
     <Compile Include="game\LivingThing.cs" />
     <Compile Include="game\MovingThing.cs" />
