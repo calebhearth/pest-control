@@ -8,7 +8,7 @@ namespace pest_control
     public class Terrain : Thing
     {
         
-        private TerrainType terrainType;
+        public TerrainType terrainType;
         public override string Sprite
         {
             get { return "terrain-" + this.terrainType.ToString().ToLower(); }

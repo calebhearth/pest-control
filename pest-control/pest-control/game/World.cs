@@ -42,7 +42,11 @@ namespace pest_control
 
             foreach (Thing t in things)
             {
-                if (t is MovingThing)
+                if (t is Critter)
+                {
+                    (t as Critter).act(things);
+                }
+                else if (t is MovingThing)
                 {
                     (t as MovingThing).act();
                 }
