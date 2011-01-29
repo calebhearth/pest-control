@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="pest_control.Game">
+    <Position X="8.75" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEEAAAAAAAwAAAAAAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.World">
+    <Position X="11.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>game\World.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.Thing">
+    <Position X="2.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>game\Thing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.MovingThing">
+    <Position X="2.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>game\MovingThing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.LivingThing">
+    <Position X="1.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>game\LivingThing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.Critter">
+    <Position X="2.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>game\Critter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.Character">
+    <Position X="0.5" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>game\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.Projectile">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>game\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.Weapon">
+    <Position X="7.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>game\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.Damage">
+    <Position X="10.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Damage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.Decider">
+    <Position X="6" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Decider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.BoundingBox">
+    <Position X="15" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAIAEAA=</HashCode>
+      <FileName>BoundingBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pest_control.Location">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAYAA=</HashCode>
+      <FileName>Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="pest_control.Direction">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Direction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="pest_control.DamageType">
+    <Position X="12.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAQAAAA=</HashCode>
+      <FileName>DamageType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
