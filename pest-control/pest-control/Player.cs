@@ -12,12 +12,14 @@ namespace pest_control
         int playerNumber;
         Game game;
         EventQueue eventQueue;
+        bool waitForKeyUp;
 
         public Player(int playerNumber, Game g, EventQueue eventQueue)
         {
             this.playerNumber = playerNumber;
             this.game = g;
             this.eventQueue = eventQueue;
+            waitForKeyUp = false;
         }
 
         public void Update()
@@ -25,6 +27,12 @@ namespace pest_control
             if (isKeyDown(Keys.F12))
             {
                 eventQueue.EnqueueEvent("SYSTEM", new Event("TERMINATE"));
+            }
+
+            if (isKeyDown(Keys.Escape) && !waitForKeyUp)
+            {
+                waitForKeyUp = true;
+                eventQueue.EnqueueEvent("SYSTEM", new Event("MENU"));
             }
 
             if (isKeyDown(Keys.Up) && isKeyDown(Keys.Left))
@@ -65,6 +73,7 @@ namespace pest_control
             }
 
             if(Keyboard.GetState().GetPressedKeys().Count() == 0) {
+                waitForKeyUp = false;
                 game.getCurrentController().inputNone(1);
             }
         }

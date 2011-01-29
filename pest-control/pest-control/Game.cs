@@ -98,6 +98,21 @@ namespace pest_control
                     case "TERMINATE":
                         Exit();
                         break;
+                    case "MENU":
+                        if (currentController == menu)
+                        {
+                            if (world == null) break;
+
+                            currentController = world;
+                            currentView = worldView;
+                        }
+                        else
+                        {
+                            currentController = menu;
+                            menuView.setChildView(worldView);
+                            currentView = menuView;
+                        }
+                        break;
                 }
             }
 

@@ -49,9 +49,14 @@ namespace pest_control
         {
             if (playerNumber != 1 || waitForKeysUp) return;
 
-            if (currentCommand == 0)
+            switch (currentCommand)
             {
-                eventQueue.EnqueueEvent("SYSTEM", new Event("NEW_GAME"));
+                case 0:
+                    eventQueue.EnqueueEvent("SYSTEM", new Event("NEW_GAME")); break;
+                case 1:
+                    break;
+                case 2:
+                    eventQueue.EnqueueEvent("SYSTEM", new Event("TERMINATE")); break;
             }
 
             waitForKeysUp = true;
