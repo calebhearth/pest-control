@@ -18,7 +18,7 @@ namespace pest_control
 
         protected bool IsSolid
         {
-            get { return isSolid; }
+            get { return isSolid; } 
             set { isSolid = value; }
         }
 
