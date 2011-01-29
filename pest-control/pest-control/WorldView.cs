@@ -46,17 +46,19 @@ namespace pest_control
             int displayHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
             foreach (Thing t in world.Things)
             {
-                string assetName;
+                string assetName = t.Sprite;
                 int cellSizeMultiplier;
                 if (t is Character)
                 {
-                    assetName = "player-front-step-left";
                     cellSizeMultiplier = 3;
                 }
-                else //if (t is Critter)
+                else if (t is Critter)
                 {
-                    assetName = "critter-left";
                     cellSizeMultiplier = 1;
+                }
+                else// if (t is Terrain)
+                {
+                    cellSizeMultiplier = 3;
                 }
                 worldBatch.Draw(assets[assetName], new Rectangle(t.BoundingBox.TopLeft.X, t.BoundingBox.TopLeft.Y, 30 * cellSizeMultiplier, 30* cellSizeMultiplier), Color.White);
             }

@@ -130,6 +130,8 @@
     <Compile Include="game\Thing.cs" />
     <Compile Include="game\Weapon.cs" />
     <Compile Include="game\World.cs" />
+    <Compile Include="Terrain.cs" />
+    <Compile Include="TerrainType.cs" />
     <Compile Include="View.cs" />
     <Compile Include="WorldView.cs" />
   </ItemGroup>

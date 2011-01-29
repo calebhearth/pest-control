@@ -74,14 +74,32 @@ namespace pest_control
 
             things = new List<Thing>();
 
-            //PopulateTerrain();
+            PopulateTerrain();
             PopulateCritters();
             PopulatePlayers();
         }
 
         private void PopulateTerrain()
         {
-            throw new NotImplementedException();
+            int cellsWide = WIDTH / CELL_SIZE / 3;
+            int cellsHigh = HEIGHT / CELL_SIZE / 3;
+            TerrainType[,] terrain = new TerrainType[cellsHigh, cellsWide];
+
+            for (int x = 0; x < cellsHigh; x++)
+            {
+                for (int y = 0; y < cellsWide; y++)
+                {
+                    if (x == 0 || x == cellsHigh - 1 || y == 0 || y == cellsWide - 1)
+                    {
+                        terrain[x, y] = TerrainType.Tree;
+                    }
+                    else
+                    {
+                        terrain[x, y] = (TerrainType)rand.Next(4) + 1;
+                    }
+                    this.things.Add(new Terrain(terrain[x, y], x * CELL_SIZE * 3, y * CELL_SIZE * 3));
+                }
+            }
         }
         private void PopulateCritters()
         {

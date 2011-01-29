@@ -16,19 +16,19 @@ namespace pest_control
             set { boundingBox = value; }
         }
 
-        protected bool IsSolid
+        public bool IsSolid
         {
             get { return isSolid; } 
             set { isSolid = value; }
         }
 
-        protected string Sprite
+        public virtual string Sprite
         {
             get { return sprite; }
             set { sprite = value; }
         }
 
-        protected BoundingBox boundingBox;
+        private BoundingBox boundingBox;
         private bool isSolid;
         private string sprite;
 

@@ -19,6 +19,7 @@ namespace pest_control
             decider = new Decider();
             this.BoundingBox = boundingBox;
             this.speed = 1;
+            this.Sprite = "critter-left";
         }
 
         public override void act()

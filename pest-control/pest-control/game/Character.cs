@@ -23,7 +23,8 @@ namespace pest_control
         public Character(int characterIndex, BoundingBox boundingBox)
         {
             this.CharacterIndex = characterIndex;
-            this.boundingBox = boundingBox;
+            this.BoundingBox = boundingBox;
+            this.Sprite = "player-front-step-left";
         }
 
         public void setDirection(Direction d) { this.direction = d; }
