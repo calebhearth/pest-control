@@ -81,8 +81,9 @@ namespace pest_control
                 Event e = eventQueue.DequeueEvent("SYSTEM");
                 if (e.getName() == "NEW_GAME")
                 {
-                    world = new World(eventQueue);
+                    world = new World(30, 1024, 768, 1, eventQueue);
                     worldView = new WorldView(GraphicsDevice,world);
+                    worldView.LoadContent(Content);
                     currentController = world;
                     currentView = worldView;
                 }

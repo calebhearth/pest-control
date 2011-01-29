@@ -10,11 +10,15 @@ namespace pest_control
 {
     class World : Controller
     {
-        public World(EventQueue eventQueue) : base(eventQueue) { }
-
         public override void Update()
         {
-
+            foreach (Thing t in things)
+            {
+                if (t is MovingThing)
+                {
+                    (t as MovingThing).act();
+                }
+            }
         }
         private static Random rand = new Random();
 
@@ -39,6 +43,8 @@ namespace pest_control
             this.WIDTH = width;
             this.CELL_SIZE = cellsize;
             this.NUM_PLAYERS = players;
+
+            things = new List<Thing>();
 
             //PopulateTerrain();
             PopulateCritters();
