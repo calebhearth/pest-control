@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace pest_control
 {
@@ -12,6 +13,38 @@ namespace pest_control
     {
         public override void Update()
         {
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            {
+                foreach (Thing t in things)
+                {
+                    if(t is Character) { (t as Character).setSpeed(1); (t as Character).setDirection(Direction.Up); }
+                }
+            } else if (Keyboard.GetState().IsKeyDown(Keys.Down))
+            {
+                foreach (Thing t in things)
+                {
+                    if(t is Character) { (t as Character).setSpeed(1); (t as Character).setDirection(Direction.Down); }
+                }
+            } else if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            {
+                foreach (Thing t in things)
+                {
+                    if(t is Character) { (t as Character).setSpeed(1); (t as Character).setDirection(Direction.Left);}
+                }
+            } else if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            {
+                foreach (Thing t in things)
+                {
+                    if(t is Character) { (t as Character).setSpeed(1); (t as Character).setDirection(Direction.Right);}
+                }
+            } else {
+                foreach (Thing t in things)
+                {
+                    if (t is Character) { (t as Character).setSpeed(0); }
+                }
+            }
+
             foreach (Thing t in things)
             {
                 if (t is MovingThing)

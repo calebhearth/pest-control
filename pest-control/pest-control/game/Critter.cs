@@ -18,12 +18,12 @@ namespace pest_control
         {
             decider = new Decider();
             this.BoundingBox = boundingBox;
-            this.speed = 9001;
+            this.speed = 1;
         }
 
         public override void act()
         {
-            decider.decide();
+            this.direction = decider.decide();
             base.act();
         }
     }

@@ -25,5 +25,9 @@ namespace pest_control
             this.CharacterIndex = characterIndex;
             this.boundingBox = boundingBox;
         }
+
+        public void setDirection(Direction d) { this.direction = d; }
+
+        public void setSpeed(int s) { this.speed = s; }
     }
 }
