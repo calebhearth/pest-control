@@ -14,7 +14,7 @@ namespace pest_control
 
         public bool Increase
         {
-            get { return Increase; }
+            get { return increase; }
         }
 
         ChromosomeType type;

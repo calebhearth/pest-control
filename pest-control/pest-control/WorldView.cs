@@ -42,8 +42,22 @@ namespace pest_control
             foreach (Thing t in world.Things) { if (t is Character) { c = (t as Character); break; } }
             worldBatch.Begin();
             graphicsDevice.Clear(Color.Pink);
-            int displayWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-            int displayHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            int Vw = graphicsDevice.DisplayMode.Width;
+            int Vh = graphicsDevice.DisplayMode.Height;
+            int Xmax = world.getWidth();
+            int Ymax = world.getHeight();
+            //int Cx = c.BoundingBox.TopLeft.X + ((c.BoundingBox.BottomRight.X - c.BoundingBox.TopLeft.X) / 2);
+            int Cx = c.BoundingBox.TopLeft.X + 45;
+            int Cy = c.BoundingBox.TopLeft.Y + 45;
+            int VTLx = Cx - (Vw / 2); if (VTLx < 0) VTLx = 0;
+            int VTLy = Cy - (Vh / 2); if (VTLy < 0) VTLy = 0;
+            //int VBRx = Cx + (Vw / 2); if (VBRx > Xmax) VTLx = Xmax - Vw;
+            int VBRx = VTLx + Vw; if (VBRx > Xmax) VTLx = Xmax - Vw;
+            //int VBRy = Cy + (Vh / 2); if (VBRy > Ymax) VTLy = Ymax - Vh;
+            int VBRy = VTLy + Vh; if (VBRy > Ymax) VTLy = Ymax - Vh;
+            int dX = VTLx;
+            int dY = VTLy;
+      
             foreach (Thing t in world.Things)
             {
                 string assetName = t.Sprite;
@@ -60,7 +74,10 @@ namespace pest_control
                 {
                     cellSizeMultiplier = 3;
                 }
-                worldBatch.Draw(assets[assetName], new Rectangle(t.BoundingBox.TopLeft.X - c.BoundingBox.TopLeft.X + (displayWidth / 2), t.BoundingBox.TopLeft.Y - c.BoundingBox.TopLeft.Y + (displayHeight / 2), 30 * cellSizeMultiplier, 30 * cellSizeMultiplier), Color.White);
+                //worldBatch.Draw(assets[assetName], new Rectangle(t.BoundingBox.TopLeft.X - c.BoundingBox.TopLeft.X + (displayWidth / 2), t.BoundingBox.TopLeft.Y - c.BoundingBox.TopLeft.Y + (displayHeight / 2), 30 * cellSizeMultiplier, 30 * cellSizeMultiplier), Color.White);
+                worldBatch.Draw(assets[assetName], new Rectangle(t.BoundingBox.TopLeft.X - dX, t.BoundingBox.TopLeft.Y - dY, 30 * cellSizeMultiplier, 30 * cellSizeMultiplier), Color.White);
+                //worldBatch.Draw(assets[assetName], new Rectangle(100, 100, 90, 90), Color.White);
+                
             }
             worldBatch.End();
         }

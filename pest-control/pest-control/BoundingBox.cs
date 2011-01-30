@@ -27,7 +27,7 @@ namespace pest_control
         public BoundingBox(Location topLeft, Location bottomRight)
         {
             this.TopLeft = topLeft;
-            this.bottomRight = bottomRight;
+            this.BottomRight = bottomRight;
         }
 
         public BoundingBox(Location topLeft, int height, int width)

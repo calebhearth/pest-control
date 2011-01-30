@@ -19,7 +19,6 @@ namespace pest_control
             {
                 case Direction.Up:
                     this.BoundingBox.TopLeft.Y -= speed;
-                    this.BoundingBox.TopLeft.Y -= speed;
                     break;
                 case Direction.UpRight:
                     this.BoundingBox.TopLeft.Y -= speed;
@@ -47,8 +46,6 @@ namespace pest_control
                     this.BoundingBox.TopLeft.Y -= speed;
                     break;
                 default:
-                    this.BoundingBox.TopLeft.X = 0;
-                    this.BoundingBox.TopLeft.Y = 0;
                     break;
             }
         }

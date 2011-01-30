@@ -60,6 +60,9 @@ namespace pest_control
         private readonly int NUM_PLAYERS;
         private static int NUM_CRITTERS = 50;
 
+        public int getHeight() { return HEIGHT; }
+        public int getWidth() { return WIDTH; }
+
         public List<Thing> Things
         {
             get { return things; }
@@ -122,12 +125,12 @@ namespace pest_control
             for (int i = 0; i < NUM_PLAYERS; i++)
             {
                 this.things.Add(
-                    new Character(characterIndex: i, 
-                                  boundingBox: new BoundingBox(rand.Next(WIDTH), 
+                    new Character(i, 
+                                  new BoundingBox(rand.Next(WIDTH), 
                                                                rand.Next(HEIGHT), 
                                                                CELL_SIZE * 3, 
-                                                               CELL_SIZE * 3)
-                                  )
+                                                               CELL_SIZE * 3))
+                                  
                                );
             }
         }

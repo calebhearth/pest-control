@@ -117,6 +117,7 @@
     <Compile Include="Direction.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="EventQueue.cs" />
+    <Compile Include="game\Attributes.cs" />
     <Compile Include="game\Character.cs" />
     <Compile Include="game\Critter.cs" />
     <Compile Include="game\LivingThing.cs" />

@@ -89,7 +89,7 @@ namespace pest_control
                 switch(e.getName())
                 {
                     case "NEW_GAME":
-                        world = new World(30, 2000, 2000, 1, eventQueue);
+                        world = new World(30, 5000, 5000, 1, eventQueue);
                         worldView = new WorldView(GraphicsDevice,world);
                         worldView.LoadContent(Content);
                         currentController = world;

@@ -34,7 +34,7 @@ namespace pest_control
 
         private Concern MostImportantConcern(Attributes attributes, List<Thing> nearbyThings)
         {
-            throw new NotImplementedException();
+            return Concern.sex;
         }
 
         private double LargestOf(params double[] values)
